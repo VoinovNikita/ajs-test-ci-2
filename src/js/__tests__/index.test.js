@@ -41,3 +41,16 @@ test('3 the more hp a character has, the higher it is', () => {
   ];
   expect(result).toEqual(expected);
 });
+test('3 the more hp a character has, the higher it is', () => {
+  const result = sortXp([
+    { name: 'мечник', health: 15 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 50 },
+  ]);
+  const expected = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 50 },
+    { name: 'мечник', health: 15 },
+  ];
+  expect(result).not.toBe(expected);
+});
